@@ -3,12 +3,12 @@ import { selectItems } from "../../redux/cars/selectors.js";
 import CarCard from "../CarCard/CarCard.jsx";
 
 const CarList = () => {
-  const cars = useSelector(selectItems);
+  const items = useSelector(selectItems);
 
   return (
     <ul>
-      {cars.map((car) => (
-        <CarCard car={car} key={car.id} />
+      {items.map((item) => (
+        <CarCard item={item} key={item.id} />
       ))}
     </ul>
   );

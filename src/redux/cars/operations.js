@@ -12,3 +12,15 @@ export const fetchCars = createAsyncThunk(
     }
   }
 );
+
+export const fetchCarById = createAsyncThunk(
+  "cars/fetchById",
+  async (id, thunkApi) => {
+    try {
+      const res = await rentalCarApi.get(`cars/${id}`);
+      return res.data;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error.message);
+    }
+  }
+);
