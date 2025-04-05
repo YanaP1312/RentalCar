@@ -27,7 +27,7 @@ const CarInfo = ({ car }) => {
       </div>
       <div>
         <ul>
-          Rental Conditions:
+          <h3>Rental Conditions:</h3>
           {car.rentalConditions.map((item) => (
             <li key={item}>
               <svg width="16" height="16">
@@ -38,7 +38,7 @@ const CarInfo = ({ car }) => {
           ))}
         </ul>
         <ul>
-          Car Specifications:
+          <h3>Car Specifications:</h3>
           <li>
             <svg width="16" height="16">
               <use href="/sprite.svg#icon-calendar" />
@@ -65,7 +65,7 @@ const CarInfo = ({ car }) => {
           </li>
         </ul>
         <ul>
-          Accessories and functionalities:
+          <h3>Accessories and functionalities:</h3>
           {accessAndFunk.map((item) => (
             <li key={item}>
               <svg width="16" height="16">

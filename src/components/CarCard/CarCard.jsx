@@ -18,10 +18,10 @@ const CarCard = ({ item }) => {
       </div>
       <div>
         <div>
-          <h3>
+          <h4>
             {item.brand}&nbsp;
             <span>{item.model}</span>,&nbsp;{item.year}
-          </h3>
+          </h4>
           <p>
             {cutAddress(item.address)}&nbsp;|&nbsp;
             {item.rentalCompany}
@@ -30,7 +30,7 @@ const CarCard = ({ item }) => {
           </p>
         </div>
         <div>
-          <h3>${item.rentalPrice}</h3>
+          <h4>${item.rentalPrice}</h4>
         </div>
       </div>
       <button onClick={() => navigate(`/catalog/${item.id}`)}>Read more</button>

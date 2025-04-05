@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation.jsx";
 import { Suspense, lazy } from "react";
+import { ToastContainer } from "react-toastify";
 
 const Home = lazy(() => import("./pages/Home/Home.jsx"));
 const Catalog = lazy(() => import("./pages/Catalog/Catalog.jsx"));
@@ -21,6 +22,13 @@ const App = () => {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Suspense>
+      <ToastContainer
+        position="bottom-left"
+        autoClose={5000}
+        pauseOnHover={true}
+        draggable={true}
+        theme="dark"
+      />
     </div>
   );
 };
