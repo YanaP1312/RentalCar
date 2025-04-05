@@ -18,7 +18,7 @@ const carsSlice = createSlice({
         state.isError = false;
       })
       .addCase(fetchCars.fulfilled, (state, { payload }) => {
-        state.items = payload.cars;
+        state.items = [...state.items, ...payload.cars];
         state.totalCars = payload.totalCars;
         state.page = payload.page;
         state.totalPages = payload.totalPages;

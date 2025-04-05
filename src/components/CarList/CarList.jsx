@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectItems } from "../../redux/cars/selectors.js";
+import CarCard from "../CarCard/CarCard.jsx";
 
 const CarList = () => {
   const cars = useSelector(selectItems);
@@ -7,7 +8,7 @@ const CarList = () => {
   return (
     <ul>
       {cars.map((car) => (
-        <CarCard {...car} key={car.id} />
+        <CarCard car={car} key={car.id} />
       ))}
     </ul>
   );
