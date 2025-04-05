@@ -1,14 +1,16 @@
+import { useState } from "react";
 import { toast } from "react-toastify";
+import CustomCalendar from "../CustomCalendar/CustomCalendar.jsx";
 
 const BookForm = () => {
+  const [selectedDate, setSelectedDate] = useState(null);
   const handleSubmit = (evt) => {
     evt.preventDefault();
     const form = evt.target;
-    const { name, email, date, comment } = form.elements;
+    const { name, email, comment } = form.elements;
 
     const nameValue = name.value.trim();
     const emailValue = email.value.trim();
-    const dateValue = date.value.trim();
     const commentValue = comment.value.trim();
 
     if (!/\S+@\S+\.\S+/.test(emailValue)) {
@@ -24,7 +26,8 @@ const BookForm = () => {
       "🚘 Thanks for your reservation! Our manager will contact you shortly."
     );
     form.reset();
-    console.log(nameValue, emailValue, dateValue, commentValue);
+    setSelectedDate(null);
+    console.log(nameValue, emailValue, selectedDate, commentValue);
   };
 
   return (
@@ -33,7 +36,10 @@ const BookForm = () => {
       <p>Stay connected! We are always ready to help you.</p>
       <input type="text" placeholder="Name*" name="name" required />
       <input type="email" placeholder="Email*" name="email" required />
-      <input type="date" placeholder="Booking date" name="date" />
+      <CustomCalendar
+        selected={selectedDate}
+        onChange={(date) => setSelectedDate(date)}
+      />
       <textarea type="text" placeholder="Comment" name="comment" />
       <button type="submit">Send</button>
     </form>

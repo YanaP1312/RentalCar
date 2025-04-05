@@ -1,0 +1,119 @@
+.custom-datepicker {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid black;
+  font-size: 16px;
+  width: 100%;
+  outline: none;
+  color: #1e1e1e;
+  background-color: #cfd8dc;
+}
+
+.calendar-custom {
+  border: 1px solid #3f80ff;
+  border-radius: 16px;
+  padding: 16px;
+  font-family: "Inter", sans-serif;
+  background-color: #f9fafe;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.react-datepicker__header {
+  background-color: transparent;
+  border-bottom: none;
+  padding-top: 0;
+}
+
+.react-datepicker__current-month {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #1e1e1e;
+}
+
+.react-datepicker__day-names {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #607d8b;
+  border-bottom: 1px solid #3f80ff;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.react-datepicker__day-name {
+  width: 3ch;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #7a8a9e;
+  font-size: 12px;
+}
+
+.react-datepicker__day {
+  border-radius: 50%;
+  transition: 0.3s;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  margin: 2px;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #3f80ff !important;
+  color: white !important;
+  font-weight: 500;
+}
+
+.react-datepicker__day:hover {
+  background-color: #dce7ff;
+}
+
+.react-datepicker__navigation {
+  top: 12px;
+}
+
+.react-datepicker__navigation--previous {
+  left: 16px;
+}
+
+.react-datepicker__navigation--next {
+  right: 16px;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: #3f80ff;
+  border-width: 2px 2px 0 0;
+  height: 10px;
+  width: 10px;
+}
+
+.react-datepicker__triangle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.react-datepicker__triangle::before {
+  content: "";
+  position: absolute;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #3f80ff;
+  top: 0;
+  left: 0;
+}
+
+.react-datepicker__triangle::after {
+  content: "";
+  position: absolute;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #f9fafe;
+  top: 1px;
+  left: 0;
+}
