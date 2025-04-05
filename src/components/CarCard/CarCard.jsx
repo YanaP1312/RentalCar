@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import {
   capitalize,
   cutAddress,
-  formatingNum,
+  formattingNum,
 } from "../../utils/stringMethods.js";
 
 const CarCard = ({ item }) => {
@@ -11,6 +11,9 @@ const CarCard = ({ item }) => {
   return (
     <li>
       <div>
+        <svg width="16" height="16">
+          <use href="/sprite.svg#icon-heart-inv" />
+        </svg>
         <img src={item.img} alt={item.description} width="276" />
       </div>
       <div>
@@ -23,7 +26,7 @@ const CarCard = ({ item }) => {
             {cutAddress(item.address)}&nbsp;|&nbsp;
             {item.rentalCompany}
             &nbsp;|&nbsp;{capitalize(item.type)}&nbsp;|&nbsp;
-            {formatingNum(item.mileage)}
+            {formattingNum(item.mileage)}
           </p>
         </div>
         <div>
