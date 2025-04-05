@@ -1,5 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { carsReducer } from "./cars/slice.js";
 
-const initialState = {};
-
-export const store = configureStore({});
+export const store = configureStore({
+  reducer: {
+    cars: carsReducer,
+    // favourites: favouritesReducer,
+    // filters: filtersReducer,
+  },
+});
