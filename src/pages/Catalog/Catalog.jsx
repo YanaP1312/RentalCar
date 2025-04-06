@@ -19,7 +19,7 @@ const Catalog = () => {
     dispatch(fetchBrands());
   }, [dispatch]);
   return (
-    <section>
+    <section className="container">
       <FilterPanel />
       <CarList />
       <LoadMore />

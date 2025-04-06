@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { selectFavorites } from "../../redux/favorites/selectors.js";
 import { toggleFavoritesCar } from "../../redux/favorites/slice.js";
+import s from "./CarCard.module.css";
 
 const CarCard = ({ item }) => {
   const navigate = useNavigate();
@@ -18,13 +19,14 @@ const CarCard = ({ item }) => {
   const isFavorite = favorites.some((car) => car.id === item.id);
 
   return (
-    <li>
+    <li className={s.carCard}>
       <div
         onClick={() => {
           dispatch(toggleFavoritesCar(item));
         }}
+        className={s.imgWrap}
       >
-        <svg width="16" height="16">
+        <svg width="16" height="16" className={s.svgWrap}>
           <use
             href={
               isFavorite
@@ -33,26 +35,37 @@ const CarCard = ({ item }) => {
             }
           />
         </svg>
-        <img src={item.img} alt={item.description} width="276" />
+        <img
+          className={s.img}
+          src={item.img}
+          alt={item.description}
+          width="276"
+        />
       </div>
-      <div>
-        <div>
-          <h4>
-            {item.brand}&nbsp;
-            <span>{item.model}</span>,&nbsp;{item.year}
-          </h4>
-          <p>
-            {cutAddress(item.address)}&nbsp;|&nbsp;
-            {item.rentalCompany}
-            &nbsp;|&nbsp;{capitalize(item.type)}&nbsp;|&nbsp;
-            {formattingNum(item.mileage)}
-          </p>
-        </div>
-        <div>
-          <h4>${item.rentalPrice}</h4>
-        </div>
+
+      <div className={s.titleWrap}>
+        <h4>
+          {item.brand}&nbsp;
+          <span>{item.model}</span>,&nbsp;{item.year}
+        </h4>
+        <h4>${item.rentalPrice}</h4>
       </div>
-      <button onClick={() => navigate(`/catalog/${item.id}`)}>Read more</button>
+
+      <p className={s.carDscr}>
+        {cutAddress(item.address)}&nbsp;|&nbsp;
+        {item.rentalCompany}
+      </p>
+      <p className={s.carDscr}>
+        {capitalize(item.type)}&nbsp;|&nbsp;
+        {formattingNum(item.mileage)}
+      </p>
+
+      <button
+        className={s.readMoreBtn}
+        onClick={() => navigate(`/catalog/${item.id}`)}
+      >
+        Read more
+      </button>
     </li>
   );
 };

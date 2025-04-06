@@ -1,0 +1,40 @@
+.carCard {
+  /* width: calc((100% - 96px) / 4); */
+  width: 276px;
+}
+
+.imgWrap {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.svgWrap {
+  fill: var(--color-blue);
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.img {
+  border-radius: 14px;
+}
+
+.titleWrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.carDscr {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  color: var(--color-grey);
+}
+
+.readMoreBtn {
+  margin-top: 28px;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}

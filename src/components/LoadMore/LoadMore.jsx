@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { selectPage, selectTotalPages } from "../../redux/cars/selectors.js";
 import { setPage } from "../../redux/cars/slice.js";
+import s from "./LoadMore.module.css";
 
 const LoadMore = () => {
   const dispatch = useDispatch();
@@ -9,8 +10,13 @@ const LoadMore = () => {
 
   if (page >= totalPages) return null;
   return (
-    <div>
-      <button onClick={() => dispatch(setPage(page + 1))}>Load more</button>
+    <div className={s.wrap}>
+      <button
+        className={s.loadMoreBtn}
+        onClick={() => dispatch(setPage(page + 1))}
+      >
+        Load more
+      </button>
     </div>
   );
 };
