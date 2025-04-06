@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import CustomCalendar from "../CustomCalendar/CustomCalendar.jsx";
+import s from "./BookForm.module.css";
 
 const BookForm = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -31,7 +32,7 @@ const BookForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
+    <form onSubmit={handleSubmit} autoComplete="off" className={s.form}>
       <h3>Book your car now</h3>
       <p>Stay connected! We are always ready to help you.</p>
       <input type="text" placeholder="Name*" name="name" required />

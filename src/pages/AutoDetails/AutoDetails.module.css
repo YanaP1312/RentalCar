@@ -1,5 +1,11 @@
 .detailsWrap {
-  margin-bottom: 84px;
+  margin-top: 84px;
+  margin-bottom: 60px;
   display: flex;
   gap: 72px;
+}
+
+.img {
+  border-radius: 19px;
+  margin-bottom: 40px;
 }

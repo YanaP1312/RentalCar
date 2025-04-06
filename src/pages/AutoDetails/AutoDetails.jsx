@@ -25,7 +25,12 @@ const AutoDetails = () => {
       ) : (
         <section className={s.detailsWrap}>
           <div>
-            <img src={car.img} alt={car.description} width="640" />
+            <img
+              src={car.img}
+              alt={car.description}
+              width="640"
+              className={s.img}
+            />
             <BookForm />
           </div>
           <div>
