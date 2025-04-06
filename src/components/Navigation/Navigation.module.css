@@ -1,6 +1,30 @@
-.link {
-  color: blue;
+.headerWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.logo {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.headerWrap nav {
+  display: flex;
+  gap: 32px;
+}
+
+.link {
+  color: var(--color-dark);
+  padding-top: 24px;
+  padding-bottom: 24px;
+  transition: color var(--transition-default);
+}
+
+.link:hover {
+  color: var(--color-blue-dark);
+}
+
 .active {
-  color: red;
+  color: var(--color-blue-dark);
 }

@@ -14,7 +14,7 @@
   --font-alt: "Inter", sans-serif;
 
   /* dt container */
-  --container-width: 1200px;
+  --container-width: 1260px;
 
   --transition-default: 0.3s ease-in-out;
 }
@@ -110,9 +110,12 @@ body {
   background-color: var(--color-white);
   line-height: 1.25;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .container {
   max-width: var(--container-width);
+  padding-left: 30px;
+  padding-right: 30px;
   margin: 0 auto;
 }
