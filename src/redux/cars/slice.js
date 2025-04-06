@@ -1,17 +1,19 @@
 import { createSlice, isAnyOf } from "@reduxjs/toolkit";
 import { fetchCarById, fetchCars } from "./operations.js";
 
+const initialState = {
+  items: [],
+  car: {},
+  totalCars: null,
+  page: 1,
+  totalPages: 1,
+  isLoading: false,
+  isError: false,
+};
+
 const carsSlice = createSlice({
   name: "cars",
-  initialState: {
-    items: [],
-    car: {},
-    totalCars: null,
-    page: 1,
-    totalPages: 1,
-    isLoading: false,
-    isError: false,
-  },
+  initialState,
   extraReducers: (builder) => {
     builder
       .addCase(fetchCars.fulfilled, (state, { payload }) => {

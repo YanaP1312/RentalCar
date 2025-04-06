@@ -47,19 +47,19 @@ const CarInfo = ({ car }) => {
           </li>
           <li>
             <svg width="16" height="16">
-              <use href="/sprite.svg#icon-calendar" />
+              <use href="/sprite.svg#icon-car" />
             </svg>
             <p>Type:&nbsp;{capitalize(car.type)}</p>
           </li>
           <li>
             <svg width="16" height="16">
-              <use href="/sprite.svg#icon-car" />
+              <use href="/sprite.svg#icon-fuel-pump" />
             </svg>
             <p>Fuel Consumption:&nbsp;{car.fuelConsumption}</p>
           </li>
           <li>
             <svg width="16" height="16">
-              <use href="/sprite.svg#icon-fuel-pump" />
+              <use href="/sprite.svg#icon-gear" />
             </svg>
             <p>Engine Size:&nbsp;{car.engineSize}</p>
           </li>

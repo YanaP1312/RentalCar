@@ -11,7 +11,7 @@ const Catalog = () => {
   }, [dispatch]);
   return (
     <section>
-      {/* <FilterPanel /> */}
+      <FilterPanel />
       <CarList />
     </section>
   );
