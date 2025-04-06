@@ -5,14 +5,33 @@ import {
   cutAddress,
   formattingNum,
 } from "../../utils/stringMethods.js";
+import { useDispatch, useSelector } from "react-redux";
+
+import { selectFavorites } from "../../redux/favorites/selectors.js";
+import { toggleFavoritesCar } from "../../redux/favorites/slice.js";
 
 const CarCard = ({ item }) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const favorites = useSelector(selectFavorites);
+
+  const isFavorite = favorites.some((car) => car.id === item.id);
+
   return (
     <li>
-      <div>
+      <div
+        onClick={() => {
+          dispatch(toggleFavoritesCar(item));
+        }}
+      >
         <svg width="16" height="16">
-          <use href="/sprite.svg#icon-heart-inv" />
+          <use
+            href={
+              isFavorite
+                ? "/sprite.svg#icon-heart-fill"
+                : "/sprite.svg#icon-heart-inv"
+            }
+          />
         </svg>
         <img src={item.img} alt={item.description} width="276" />
       </div>

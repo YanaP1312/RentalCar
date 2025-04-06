@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectItems } from "../../redux/cars/selectors.js";
 import Select from "react-select";
 import DropdownIndicator from "../DropdownIndicator/Dropdownindicator.jsx";
 import "./PriceSelect.module.css";
@@ -10,7 +9,7 @@ const PriceSelect = () => {
   const dispatch = useDispatch();
   const selected = useSelector(selectPrice);
 
-  const prices = Array.from({ length: 15 }, (_, i) => 20 + i * 10);
+  const prices = Array.from({ length: 6 }, (_, i) => 30 + i * 10);
 
   const options = prices.map((price) => ({
     value: price.toString(),

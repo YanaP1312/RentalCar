@@ -6,9 +6,11 @@ const LoadMore = () => {
   const dispatch = useDispatch();
   const totalPages = useSelector(selectTotalPages);
   const page = useSelector(selectPage);
+
+  if (page >= totalPages) return null;
   return (
     <div>
-      <button onClick={(e) => dispatch(setPage(page + 1))}>Load more</button>
+      <button onClick={() => dispatch(setPage(page + 1))}>Load more</button>
     </div>
   );
 };

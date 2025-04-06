@@ -13,6 +13,9 @@ const Catalog = () => {
 
   useEffect(() => {
     dispatch(fetchCars());
+  }, [dispatch, page]);
+
+  useEffect(() => {
     dispatch(fetchBrands());
   }, [dispatch]);
   return (
