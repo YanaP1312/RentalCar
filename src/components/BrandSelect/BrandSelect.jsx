@@ -18,7 +18,7 @@ const BrandSelect = () => {
 
   const handleBrandChange = (selected) => {
     dispatch(setBrand(selected?.value || ""));
-    dispatch(setPrice("")); // сбрасываем цену
+    dispatch(setPrice(""));
     dispatch(setMileageFrom(null));
     dispatch(setMileageTo(null));
   };

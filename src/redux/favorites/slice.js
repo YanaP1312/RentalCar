@@ -1,8 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { loadFromLocalStorage } from "./operations.js";
+import {
+  loadFromLocalStorage,
+  saveToLocalStorage,
+} from "../../utils/localeStorage.js";
+
+const savedFavorites = loadFromLocalStorage("favorites");
 
 const initialState = {
-  favoritesCar: loadFromLocalStorage(),
+  favoritesCar: savedFavorites || [],
 };
 
 const favoritesSlice = createSlice({
@@ -18,7 +23,7 @@ const favoritesSlice = createSlice({
       } else {
         state.favoritesCar.push(payload);
       }
-      localStorage.setItem("favorites", JSON.stringify(state.favoritesCar));
+      saveToLocalStorage("favorites", state.favoritesCar);
     },
   },
 });

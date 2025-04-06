@@ -13,7 +13,7 @@ import { toggleFavoritesCar } from "../../redux/favorites/slice.js";
 const CarCard = ({ item }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const favorites = useSelector(selectFavorites);
+  const favorites = useSelector(selectFavorites) || [];
 
   const isFavorite = favorites.some((car) => car.id === item.id);
 

@@ -1,7 +1,13 @@
 import { createSlice, isAnyOf } from "@reduxjs/toolkit";
 import { fetchBrands } from "./operations.js";
+import {
+  loadFromLocalStorage,
+  saveToLocalStorage,
+} from "../../utils/localeStorage.js";
 
-const initialState = {
+const savedFilters = loadFromLocalStorage("filters");
+
+const initialState = savedFilters || {
   brandList: [],
   priceList: [],
   brand: "",
@@ -18,15 +24,19 @@ const filtersSlice = createSlice({
   reducers: {
     setBrand: (state, { payload }) => {
       state.brand = payload;
+      saveToLocalStorage("filters", state);
     },
     setPrice: (state, { payload }) => {
       state.price = Number(payload);
+      saveToLocalStorage("filters", state);
     },
     setMileageFrom: (state, { payload }) => {
       state.mileageFrom = payload;
+      saveToLocalStorage("filters", state);
     },
     setMileageTo: (state, { payload }) => {
       state.mileageTo = payload;
+      saveToLocalStorage("filters", state);
     },
   },
   extraReducers: (builder) => {
