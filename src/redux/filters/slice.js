@@ -2,8 +2,8 @@ import { createSlice, isAnyOf } from "@reduxjs/toolkit";
 import { fetchBrands } from "./operations.js";
 
 const initialState = {
-  brand: null,
-  price: null,
+  brand: [],
+  price: [],
   mileageFrom: null,
   mileageTo: null,
   isLoading: false,
