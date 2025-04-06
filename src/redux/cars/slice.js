@@ -6,7 +6,7 @@ const initialState = {
   car: {},
   totalCars: null,
   page: 1,
-  totalPages: 1,
+  totalPages: null,
   isLoading: false,
   isError: false,
 };
@@ -14,6 +14,15 @@ const initialState = {
 const carsSlice = createSlice({
   name: "cars",
   initialState,
+  reducers: {
+    setPage: (state, { payload }) => (state.page = payload),
+    resetItems: (state) => {
+      state.items = [];
+      state.page = 1;
+      state.totalCars = null;
+      state.totalPages = null;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchCars.fulfilled, (state, { payload }) => {
@@ -44,5 +53,5 @@ const carsSlice = createSlice({
       );
   },
 });
-
+export const { setPage, resetItems } = carsSlice.actions;
 export const carsReducer = carsSlice.reducer;

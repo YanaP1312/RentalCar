@@ -1,4 +1,4 @@
-const SearchBtn = ({ onClick }) => {
-  return <button onClick={onClick}>Search</button>;
+const SearchBtn = () => {
+  return <button type="submit">Search</button>;
 };
 export default SearchBtn;

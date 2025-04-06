@@ -1,10 +1,5 @@
-//   brand: null,
-//   price: null,
-//   mileageFrom: null,
-//     mileageTo: null,
-//     isLoading: false,
-//   isError: false,
-
+export const selectBrandList = (state) => state.filters.brandList;
+export const selectPriceList = (state) => state.filters.priceList;
 export const selectBrand = (state) => state.filters.brand;
 export const selectPrice = (state) => state.filters.price;
 export const selectMileageFrom = (state) => state.filters.mileageFrom;

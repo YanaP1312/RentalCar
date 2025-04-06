@@ -2,8 +2,10 @@ import { createSlice, isAnyOf } from "@reduxjs/toolkit";
 import { fetchBrands } from "./operations.js";
 
 const initialState = {
-  brand: [],
-  price: [],
+  brandList: [],
+  priceList: [],
+  brand: "",
+  price: "",
   mileageFrom: null,
   mileageTo: null,
   isLoading: false,
@@ -13,26 +15,25 @@ const initialState = {
 const filtersSlice = createSlice({
   name: "filters",
   initialState,
-  reducer: {
+  reducers: {
     setBrand: (state, { payload }) => {
       state.brand = payload;
     },
     setPrice: (state, { payload }) => {
-      state.price = payload;
+      state.price = Number(payload);
     },
     setMileageFrom: (state, { payload }) => {
-      state.mileageForm = payload;
+      state.mileageFrom = payload;
     },
     setMileageTo: (state, { payload }) => {
       state.mileageTo = payload;
     },
-    resetFilters: () => initialState,
   },
   extraReducers: (builder) => {
     builder
       .addCase(fetchBrands.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        state.brand = payload;
+        state.brandList = payload;
       })
       .addMatcher(isAnyOf(fetchBrands.pending), (state) => {
         state.isLoading = true;
@@ -46,7 +47,7 @@ const filtersSlice = createSlice({
   },
 });
 
-const { setBrand, setPrice, setMileageFrom, setMileageTo, resetFilters } =
+export const { setBrand, setPrice, setMileageFrom, setMileageTo } =
   filtersSlice.actions;
 
 export const filtersReducer = filtersSlice.reducer;

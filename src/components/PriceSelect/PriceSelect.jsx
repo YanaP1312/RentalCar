@@ -1,31 +1,34 @@
-import { useId } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectItems } from "../../redux/cars/selectors.js";
+import Select from "react-select";
+import DropdownIndicator from "../DropdownIndicator/Dropdownindicator.jsx";
+import "./PriceSelect.module.css";
+import { setPrice } from "../../redux/filters/slice.js";
+import { selectPrice } from "../../redux/filters/selectors.js";
 
 const PriceSelect = () => {
-  const selectId = useId();
-  const items = useSelector(selectItems);
+  const dispatch = useDispatch();
+  const selected = useSelector(selectPrice);
 
-  const prices = [
-    ...new Set(items.map((item) => Number(item.rentalPrice))),
-  ].sort((a, b) => a - b);
+  const prices = Array.from({ length: 15 }, (_, i) => 20 + i * 10);
+
+  const options = prices.map((price) => ({
+    value: price.toString(),
+    label: price,
+  }));
 
   return (
     <div>
-      <label htmlFor={selectId}>Price/ 1 hour</label>
-      <div>
-        <svg width="16" height="16">
-          <use href="/sprite.svg#icon-arrow-down" />
-        </svg>
-        <select id={selectId} name="price">
-          <option value="">Choose a price</option>
-          {prices.map((price) => (
-            <option key={price} value={price}>
-              {price}
-            </option>
-          ))}
-        </select>
-      </div>
+      <label className="select-label">Price/ 1 hour</label>
+      <Select
+        options={options}
+        value={selected ? { value: selected, label: selected } : null}
+        placeholder="Choose a price"
+        isClearable
+        classNamePrefix="custom-select"
+        components={{ DropdownIndicator, IndicatorSeparator: () => null }}
+        onChange={(selected) => dispatch(setPrice(selected?.value || ""))}
+      />
     </div>
   );
 };
