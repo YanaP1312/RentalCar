@@ -23,13 +23,13 @@ const AutoDetails = () => {
       {loading || !car.id ? (
         <Loader />
       ) : (
-        <section className={s.detailsWrap}>
+        <section className={s.detailsSection}>
           <div>
             <img
               src={car.img}
               alt={car.description}
               width="640"
-              className={s.img}
+              className={s.carImg}
             />
             <BookForm />
           </div>

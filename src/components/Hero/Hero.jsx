@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className={s.heroWrap}>
       <div className="container">
-        <div className={s.infoBlock}>
+        <div className={s.heroInfo}>
           <h1>Find your perfect rental car</h1>
           <h2>Reliable and budget-friendly rentals for any journey</h2>
           <button onClick={() => navigate("/catalog")}>View Catalog</button>

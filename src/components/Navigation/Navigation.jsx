@@ -10,7 +10,7 @@ const Navigation = () => {
   return (
     <header>
       <div className="container">
-        <div className={s.headerWrap}>
+        <div className={s.navWrap}>
           <Link className={s.logo} to="/">
             <img src="/logo.svg" alt="RentalCar Logo" />
           </Link>

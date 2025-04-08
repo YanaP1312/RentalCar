@@ -1,11 +1,11 @@
-.detailsWrap {
+.detailsSection {
   margin-top: 84px;
   margin-bottom: 60px;
   display: flex;
   gap: 72px;
 }
 
-.img {
+.carImg {
   border-radius: 19px;
   margin-bottom: 40px;
 }

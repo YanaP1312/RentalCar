@@ -28,17 +28,17 @@
       url(/img/bg@2x.jpg);
   }
 }
-.infoBlock {
+.heroInfo {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 60px;
 }
 
-.infoBlock h2 {
+.heroInfo h2 {
   margin-top: 16px;
   margin-bottom: 40px;
 }
 
-.infoBlock button {
+.heroInfo button {
   padding: 12px 88px;
 }

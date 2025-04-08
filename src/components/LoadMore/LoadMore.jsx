@@ -10,7 +10,7 @@ const LoadMore = () => {
 
   if (page >= totalPages) return null;
   return (
-    <div className={s.wrap}>
+    <div className={s.wrapBtn}>
       <button
         className={s.loadMoreBtn}
         onClick={() => dispatch(setPage(page + 1))}

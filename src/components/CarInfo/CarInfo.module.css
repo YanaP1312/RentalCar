@@ -1,0 +1,39 @@
+.wrapInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.mainInfoWrap {
+  margin-bottom: 68px;
+}
+
+.wrapLocation {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.description {
+  margin-top: 32px;
+}
+
+.listInfo:not(:last-child) {
+  margin-bottom: 110px;
+}
+
+.listInfo h3 {
+  margin-bottom: 20px;
+}
+
+.listInfo li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.listInfo li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

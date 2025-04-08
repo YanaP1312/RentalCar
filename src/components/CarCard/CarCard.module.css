@@ -1,6 +1,5 @@
-.carCard {
-  /* width: calc((100% - 96px) / 4); */
-  width: 276px;
+.carItem {
+  width: calc((100% - 96px) / 4);
 }
 
 .imgWrap {
@@ -8,17 +7,11 @@
   margin-bottom: 16px;
 }
 
-.svgWrap {
+.svgHeart {
   fill: var(--color-blue);
   position: absolute;
   right: 16px;
   top: 16px;
-}
-
-.img {
-  border-radius: 14px;
-  width: 276px;
-  height: 268px;
 }
 
 .titleWrap {
@@ -27,7 +20,14 @@
   margin-bottom: 8px;
 }
 
-.carDscr {
+.title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 85%;
+}
+
+.description {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.33;
