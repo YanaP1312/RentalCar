@@ -25,12 +25,14 @@ const AutoDetails = () => {
       ) : (
         <section className={s.detailsSection}>
           <div>
-            <img
-              src={car.img}
-              alt={car.description}
-              width="640"
-              className={s.carImg}
-            />
+            <div className={s.imgWrap}>
+              <img
+                src={car.img}
+                alt={car.description}
+                width="640"
+                style={{ borderRadius: "19px" }}
+              />
+            </div>
             <BookForm />
           </div>
           <div>

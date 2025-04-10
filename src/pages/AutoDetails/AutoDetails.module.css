@@ -5,7 +5,8 @@
   gap: 72px;
 }
 
-.carImg {
-  border-radius: 19px;
-  margin-bottom: 40px;
+.imgWrap {
+  flex-shrink: 0;
+  margin-bottom: 65px;
+  width: 640px;
 }

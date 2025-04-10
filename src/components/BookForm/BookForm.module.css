@@ -3,3 +3,37 @@
   border-radius: 10px;
   padding: 32px;
 }
+
+.form h3 {
+  margin-bottom: 8px;
+}
+
+.form p {
+  margin-bottom: 24px;
+}
+
+.inputsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.inputsWrap input {
+  height: 48px;
+  padding: 14px 20px;
+}
+
+.inputsWrap textarea {
+  height: 88px;
+  padding: 12px 20px;
+}
+
+.btnWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.sendBtn {
+  padding: 12px 58px;
+}

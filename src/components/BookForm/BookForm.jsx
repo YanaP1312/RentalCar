@@ -34,15 +34,23 @@ const BookForm = () => {
   return (
     <form onSubmit={handleSubmit} autoComplete="off" className={s.form}>
       <h3>Book your car now</h3>
-      <p>Stay connected! We are always ready to help you.</p>
-      <input type="text" placeholder="Name*" name="name" required />
-      <input type="email" placeholder="Email*" name="email" required />
-      <CustomCalendar
-        selected={selectedDate}
-        onChange={(date) => setSelectedDate(date)}
-      />
-      <textarea type="text" placeholder="Comment" name="comment" />
-      <button type="submit">Send</button>
+      <p style={{ color: "var(--color-grey)" }}>
+        Stay connected! We are always ready to help you.
+      </p>
+      <div className={s.inputsWrap}>
+        <input type="text" placeholder="Name*" name="name" required />
+        <input type="email" placeholder="Email*" name="email" required />
+        <CustomCalendar
+          selected={selectedDate}
+          onChange={(date) => setSelectedDate(date)}
+        />
+        <textarea type="text" placeholder="Comment" name="comment" />
+      </div>
+      <div className={s.btnWrap}>
+        <button className={s.sendBtn} type="submit">
+          Send
+        </button>
+      </div>
     </form>
   );
 };
