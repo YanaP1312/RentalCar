@@ -1,0 +1,11 @@
+.notFoundWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.notFoundWrap h1 {
+  color: var(--color-dark);
+  font-size: 40px;
+}
