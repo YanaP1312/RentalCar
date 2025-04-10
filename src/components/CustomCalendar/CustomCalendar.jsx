@@ -4,13 +4,13 @@ import "./CustomCalendar.css";
 import { registerLocale } from "react-datepicker";
 import enUS from "date-fns/locale/en-US";
 
-// registerLocale("en", {
-//   ...enUS,
-//   options: {
-//     ...enUS.options,
-//     weekStartsOn: 1,
-//   },
-// });
+registerLocale("en", {
+  ...enUS,
+  options: {
+    ...enUS.options,
+    weekStartsOn: 1,
+  },
+});
 
 const CustomCalendar = ({ selected, onChange }) => {
   return (
@@ -21,7 +21,7 @@ const CustomCalendar = ({ selected, onChange }) => {
       dateFormat="dd.MM.yyyy"
       locale="en"
       className="custom-datepicker"
-      popperPlacement="bottom-start"
+      popperPlacement="bottom"
       calendarClassName="calendar-custom"
       popperClassName="calendar-popper"
     />

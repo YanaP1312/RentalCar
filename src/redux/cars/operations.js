@@ -1,18 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { rentalCarApi } from "../rental-car-api.js";
 
-// export const fetchCars = createAsyncThunk(
-//   "cars/fetchAll",
-//   async (_, thunkAPI) => {
-//     try {
-//       const res = await rentalCarApi.get("/cars");
-//       return res.data;
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error.message);
-//     }
-//   }
-// );
-
 export const fetchCars = createAsyncThunk(
   "cars/fetchAll",
   async (_, thunkAPI) => {
@@ -45,7 +33,7 @@ export const fetchCarById = createAsyncThunk(
       const res = await rentalCarApi.get(`cars/${id}`);
       return res.data;
     } catch (error) {
-      return thunkApi.rejectWithValue(error.message);
+      return thunkApi.rejectWithValue(error.response?.status || error.message);
     }
   }
 );

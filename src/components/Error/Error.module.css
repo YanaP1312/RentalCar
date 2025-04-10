@@ -1,0 +1,9 @@
+.errorWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+}

@@ -8,7 +8,7 @@ const initialState = {
   page: 1,
   totalPages: null,
   isLoading: false,
-  isError: false,
+  error: null,
 };
 
 const carsSlice = createSlice({
@@ -41,7 +41,7 @@ const carsSlice = createSlice({
       })
       .addMatcher(isAnyOf(fetchCars.pending, fetchCarById.pending), (state) => {
         state.isLoading = true;
-        state.isError = false;
+        state.error = false;
       })
       .addMatcher(
         isAnyOf(fetchCars.fulfilled, fetchCarById.fulfilled),
@@ -51,9 +51,10 @@ const carsSlice = createSlice({
       )
       .addMatcher(
         isAnyOf(fetchCars.rejected, fetchCarById.rejected),
-        (state) => {
+        (state, { payload }) => {
           state.isLoading = false;
-          state.isError = true;
+          state.error = payload;
+          console.log("error:", state.error);
         }
       );
   },

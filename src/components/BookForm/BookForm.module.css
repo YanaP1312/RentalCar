@@ -27,6 +27,7 @@
 .inputsWrap textarea {
   height: 88px;
   padding: 12px 20px;
+  resize: none;
 }
 
 .btnWrap {

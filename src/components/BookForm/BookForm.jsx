@@ -15,11 +15,17 @@ const BookForm = () => {
     const commentValue = comment.value.trim();
 
     if (!/\S+@\S+\.\S+/.test(emailValue)) {
-      toast("🚨 Please enter a valid email address");
+      toast(
+        "🚨 Please enter a valid email address. For example:  example@gmail.com."
+      );
       return;
     }
     if (nameValue.length > 10) {
       toast("🚨 Name must be 10 characters or less");
+      return;
+    }
+    if (nameValue.length < 1) {
+      toast("🚨 Please, enter your name");
       return;
     }
 
@@ -32,14 +38,35 @@ const BookForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off" className={s.form}>
+    <form
+      noValidate
+      onSubmit={handleSubmit}
+      autoComplete="off"
+      className={s.form}
+    >
       <h3>Book your car now</h3>
       <p style={{ color: "var(--color-grey)" }}>
         Stay connected! We are always ready to help you.
       </p>
       <div className={s.inputsWrap}>
-        <input type="text" placeholder="Name*" name="name" required />
-        <input type="email" placeholder="Email*" name="email" required />
+        <input
+          type="text"
+          placeholder="Name*"
+          name="name"
+          required
+          onInvalid={(e) => {
+            e.target.setCustomValidity("");
+          }}
+        />
+        <input
+          type="email"
+          placeholder="Email*"
+          name="email"
+          required
+          onInvalid={(e) => {
+            e.target.setCustomValidity("");
+          }}
+        />
         <CustomCalendar
           selected={selectedDate}
           onChange={(date) => setSelectedDate(date)}

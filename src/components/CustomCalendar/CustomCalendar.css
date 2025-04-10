@@ -20,26 +20,20 @@
 .react-datepicker__day-names {
   display: flex;
   justify-content: space-between;
+  text-transform: uppercase;
   margin-top: 12px;
-  margin-bottom: 12px;
   font-weight: 600;
-  color: var(--color-grey);
   font-size: 12px;
   line-height: 1.2;
   border-bottom: 1px solid var(--color-blue);
 }
 
 .react-datepicker__day-name {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: #7a8a9e;
-  font-size: 12px;
+  color: var(--color-grey);
 }
 
 .react-datepicker__day {
   border-radius: 32px;
-  transition: 0.3s;
   width: 36px;
   height: 32px;
   padding: 10px;
@@ -47,21 +41,29 @@
   font-weight: 400;
   font-size: 14px;
   text-align: center;
+  transition: background-color var(--transition-default);
+}
+
+.react-datepicker__day--outside-month {
+  color: var(--color-grey);
 }
 
 .react-datepicker__day--selected,
 .react-datepicker__day--keyboard-selected {
   background-color: var(--color-blue) !important;
   color: var(--color-white) !important;
-  font-weight: 500;
 }
 
 .react-datepicker__day:hover {
-  background-color: #dce7ff;
+  background-color: var(--color-light-grey);
 }
 
 .react-datepicker__navigation {
-  top: 12px;
+  top: 8px;
+}
+
+.react-datepicker__navigation:hover {
+  background-color: transparent;
 }
 
 .react-datepicker__navigation--previous {
@@ -73,34 +75,16 @@
 }
 
 .react-datepicker__navigation-icon::before {
-  border-color: #3f80ff;
+  color: var(--color-blue);
   border-width: 2px 2px 0 0;
-  height: 10px;
-  width: 10px;
+  height: 12px;
+  width: 12px;
+}
+
+.react-datepicker-popper .react-datepicker__triangle {
+  stroke: var(--color-blue);
 }
 
 .react-datepicker__triangle {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.react-datepicker__triangle::before {
-  content: "";
-  position: absolute;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #3f80ff;
-  top: 0;
-  left: 0;
-}
-
-.react-datepicker__triangle::after {
-  content: "";
-  position: absolute;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #f9fafe;
-  top: 1px;
-  left: 0;
+  left: 48% !important;
 }

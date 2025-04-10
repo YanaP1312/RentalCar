@@ -6,7 +6,15 @@
 }
 
 .imgWrap {
+  position: relative;
   flex-shrink: 0;
-  margin-bottom: 65px;
+  margin-bottom: 50px;
   width: 640px;
+}
+
+.svgHeart {
+  fill: var(--color-blue);
+  position: absolute;
+  right: 30px;
+  top: 30px;
 }
