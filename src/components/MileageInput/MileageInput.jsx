@@ -4,11 +4,6 @@ import { setMileageFrom, setMileageTo } from "../../redux/filters/slice.js";
 
 const MileageInput = () => {
   const dispatch = useDispatch();
-  const items = useSelector(selectItems);
-
-  const mileageValues = [...new Set(items.map((item) => item.mileage))];
-  const minMileage = Math.min(...mileageValues);
-  const maxMileage = Math.max(...mileageValues);
 
   return (
     <fieldset>
@@ -19,7 +14,7 @@ const MileageInput = () => {
         <input
           type="number"
           name="mileageFrom"
-          min={minMileage}
+          min="3000"
           onChange={(e) => dispatch(setMileageFrom(e.target.value))}
         />
       </div>
@@ -29,7 +24,7 @@ const MileageInput = () => {
         <input
           type="number"
           name="mileageTo"
-          max={maxMileage}
+          max="7000"
           onChange={(e) => dispatch(setMileageTo(e.target.value))}
         />
       </div>

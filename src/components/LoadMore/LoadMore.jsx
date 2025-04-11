@@ -9,6 +9,7 @@ const LoadMore = () => {
   const page = useSelector(selectPage);
 
   if (page >= totalPages) return null;
+
   return (
     <div className={s.wrapBtn}>
       <button

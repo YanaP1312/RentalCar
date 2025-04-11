@@ -52,6 +52,7 @@ const BookForm = () => {
         <input
           type="text"
           placeholder="Name*"
+          pattern="[A-Za-zА-Яа-яЁё\s\-']+"
           name="name"
           required
           onInvalid={(e) => {

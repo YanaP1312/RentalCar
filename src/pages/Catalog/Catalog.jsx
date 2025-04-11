@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCars } from "../../redux/cars/operations.js";
 import CarList from "../../components/CarList/CarList.jsx";
@@ -10,6 +10,7 @@ import LoadMore from "../../components/LoadMore/LoadMore.jsx";
 const Catalog = () => {
   const dispatch = useDispatch();
   const page = useSelector(selectPage);
+  const [showFavorites, setShowFavorites] = useState(false);
 
   useEffect(() => {
     dispatch(fetchCars());
@@ -21,8 +22,20 @@ const Catalog = () => {
   return (
     <section className="container">
       <FilterPanel />
-      <CarList />
-      <LoadMore />
+      <button type="button" onClick={() => setShowFavorites((prev) => !prev)}>
+        {showFavorites ? (
+          "Show all"
+        ) : (
+          <>
+            Show&nbsp;
+            <svg width="16" height="16">
+              <use href="/sprite.svg#icon-heart-fill" />
+            </svg>
+          </>
+        )}
+      </button>
+      <CarList showFavorites={showFavorites} />
+      {!showFavorites && <LoadMore />}
     </section>
   );
 };
