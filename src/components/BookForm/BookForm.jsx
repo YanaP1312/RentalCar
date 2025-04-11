@@ -34,7 +34,6 @@ const BookForm = () => {
     );
     form.reset();
     setSelectedDate(null);
-    console.log(nameValue, emailValue, selectedDate, commentValue);
   };
 
   return (

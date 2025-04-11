@@ -5,3 +5,13 @@
   margin-top: 65px;
   margin-bottom: 71px;
 }
+
+.emptyWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  width: 100vw;
+  font-size: 40px;
+  font-weight: bold;
+}

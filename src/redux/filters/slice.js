@@ -12,8 +12,8 @@ const initialState = savedFilters || {
   priceList: [],
   brand: "",
   price: "",
-  mileageFrom: null,
-  mileageTo: null,
+  mileageFrom: "",
+  mileageTo: "",
   isLoading: false,
   isError: false,
 };

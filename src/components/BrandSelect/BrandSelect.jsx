@@ -9,6 +9,7 @@ import {
   setMileageTo,
   setPrice,
 } from "../../redux/filters/slice.js";
+import { fetchCars } from "../../redux/cars/operations.js";
 
 const BrandSelect = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const BrandSelect = () => {
     dispatch(setPrice(""));
     dispatch(setMileageFrom(null));
     dispatch(setMileageTo(null));
+    dispatch(fetchCars());
   };
 
   return (

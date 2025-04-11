@@ -8,8 +8,8 @@ const buildLinkClass = ({ isActive }) => {
 
 const Navigation = () => {
   return (
-    <header>
-      <div className="container">
+    <header className={s.header}>
+      <div className={s.wrapForAbs}>
         <div className={s.navWrap}>
           <Link className={s.logo} to="/">
             <img src="/logo.svg" alt="RentalCar Logo" />

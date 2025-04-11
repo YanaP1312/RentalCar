@@ -21,7 +21,7 @@ const Catalog = () => {
   }, [dispatch]);
   return (
     <section className="container">
-      <FilterPanel />
+      <FilterPanel setShowFavorites={setShowFavorites} />
       <button type="button" onClick={() => setShowFavorites((prev) => !prev)}>
         {showFavorites ? (
           "Show all"

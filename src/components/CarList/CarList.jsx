@@ -26,9 +26,16 @@ const CarList = ({ showFavorites }) => {
         <Loader />
       ) : (
         <ul className={s.carList}>
-          {listToRender.map((item) => (
-            <CarCard item={item} key={item.id} />
-          ))}
+          {listToRender.length === 0 ? (
+            <div className={s.emptyWrap}>
+              <p>
+                🚨 No cars were found for your request,&nbsp;
+                <span>please try again!</span>
+              </p>
+            </div>
+          ) : (
+            listToRender.map((item) => <CarCard item={item} key={item.id} />)
+          )}
         </ul>
       )}
     </div>

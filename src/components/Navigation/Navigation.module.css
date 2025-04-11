@@ -1,4 +1,20 @@
+.header {
+  position: relative;
+}
+
+.wrapForAbs {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--color-light-grey);
+  z-index: 1000;
+}
+
 .navWrap {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
