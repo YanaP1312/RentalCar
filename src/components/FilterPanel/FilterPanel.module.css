@@ -1,0 +1,7 @@
+.searchForm {
+  margin-top: 152px;
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}

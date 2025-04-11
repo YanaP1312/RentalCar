@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { selectBrand, selectBrandList } from "../../redux/filters/selectors.js";
 import Select from "react-select";
-import "./BrandSelect.module.css";
+import "./BrandSelect.css";
 import DropdownIndicator from "../DropdownIndicator/Dropdownindicator.jsx";
 import {
   setBrand,
@@ -28,6 +28,7 @@ const BrandSelect = () => {
   return (
     <div>
       <label className="select-label">Car brand</label>
+
       <Select
         options={options}
         value={selected ? { value: selected, label: selected } : null}
