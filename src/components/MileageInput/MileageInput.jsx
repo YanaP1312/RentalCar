@@ -5,6 +5,7 @@ import {
   selectMileageTo,
 } from "../../redux/filters/selectors.js";
 import { useEffect, useState } from "react";
+import s from "./MileageInput.module.css";
 
 const MileageInput = () => {
   const dispatch = useDispatch();
@@ -47,7 +48,7 @@ const MileageInput = () => {
 
   return (
     <fieldset>
-      <legend>Сar mileage / km</legend>
+      <legend className="select-label">Сar mileage / km</legend>
       <div>
         <span>From</span>
         <input
