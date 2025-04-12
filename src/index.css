@@ -141,3 +141,82 @@ select:-webkit-autofill {
   padding-right: 30px;
   margin: 0 auto;
 }
+
+/* custom-select-styles */
+
+.select-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  color: var(--color-grey);
+  margin-bottom: 8px;
+}
+
+div.custom-select__control {
+  border-radius: 12px;
+  background: var(--color-bg-light);
+  border: none;
+  padding: 0 16px;
+  width: 204px;
+  height: 44px;
+  min-height: unset;
+  box-shadow: none;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--color-dark);
+}
+div.custom-select__single-value,
+div.custom-select__placeholder {
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--color-dark);
+}
+
+div.custom-select__menu {
+  border-radius: 12px;
+  border: 1px solid var(--color-bg-light);
+  width: 204px;
+  height: 286px;
+  background: var(--color-white);
+  box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.02);
+  z-index: 99;
+  overflow: hidden;
+}
+
+div.custom-select__option {
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--color-grey);
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+div.custom-select__option--is-selected {
+  color: var(--color-dark);
+  background: transparent;
+}
+
+div.custom-select__option--is-focused {
+  background-color: transparent;
+  color: var(--color-dark);
+}
+
+div.custom-select__indicators {
+  gap: 6px;
+  padding: 0;
+}
+
+div.custom-select__indicator {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}

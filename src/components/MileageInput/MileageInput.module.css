@@ -1,1 +1,51 @@
+.wrapForMil {
+  display: flex;
+}
 
+.wrapForMil input {
+  width: 160px;
+  height: 44px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.wrapFromMil,
+.wrapToMil {
+  position: relative;
+}
+
+.wrapFromMil span,
+.wrapToMil span {
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  color: var(--color-dark);
+}
+
+.inputFrom {
+  border-right: 1px solid #dadde1;
+  border-radius: 12px 0 0 12px;
+  padding-left: 68px;
+}
+.inputTo {
+  border-radius: 0 12px 12px 0;
+  padding-left: 48px;
+}
+
+.error {
+  color: var(--color-blue);
+  font-size: 10px;
+  position: absolute;
+}
+.iconCross {
+  position: absolute;
+  right: 16px;
+  top: 17px;
+  width: 10px;
+  height: 10px;
+  color: var(--color-border);
+}
+
+.iconCross:hover {
+  color: var(--color-grey);
+}

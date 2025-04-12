@@ -3,5 +3,6 @@
   margin-bottom: 28px;
   display: flex;
   justify-content: center;
+  align-items: end;
   gap: 16px;
 }

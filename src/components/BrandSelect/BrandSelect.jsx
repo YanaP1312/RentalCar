@@ -9,7 +9,6 @@ import {
   setPrice,
 } from "../../redux/filters/slice.js";
 import { fetchCars } from "../../redux/cars/operations.js";
-import "./BrandSelect.css";
 
 const BrandSelect = () => {
   const dispatch = useDispatch();
@@ -20,8 +19,8 @@ const BrandSelect = () => {
   const handleBrandChange = (selected) => {
     dispatch(setBrand(selected?.value || ""));
     dispatch(setPrice(""));
-    dispatch(setMileageFrom(null));
-    dispatch(setMileageTo(null));
+    dispatch(setMileageFrom(""));
+    dispatch(setMileageTo(""));
     dispatch(fetchCars());
   };
 
