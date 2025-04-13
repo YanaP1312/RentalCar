@@ -6,21 +6,9 @@ import SearchBtn from "../SearchBtn/SearchBtn.jsx";
 import { fetchCars } from "../../redux/cars/operations.js";
 import { resetItems } from "../../redux/cars/slice.js";
 import s from "./FilterPanel.module.css";
-import {
-  selectBrand,
-  selectMileageFrom,
-  selectMileageTo,
-  selectPrice,
-} from "../../redux/filters/selectors.js";
-import { useEffect } from "react";
 
 const FilterPanel = ({ setShowFavorites }) => {
   const dispatch = useDispatch();
-
-  // const brand = useSelector(selectBrand);
-  // const price = useSelector(selectPrice);
-  // const mileageFrom = useSelector(selectMileageFrom);
-  // const mileageTo = useSelector(selectMileageTo);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -28,10 +16,6 @@ const FilterPanel = ({ setShowFavorites }) => {
     dispatch(resetItems());
     dispatch(fetchCars());
   };
-
-  // useEffect(() => {
-  //   dispatch(fetchCars());
-  // }, [brand, price, mileageFrom, mileageTo]);
 
   return (
     <form onSubmit={handleSubmit} className={s.searchForm}>

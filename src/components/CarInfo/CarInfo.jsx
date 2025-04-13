@@ -11,10 +11,12 @@ const CarInfo = ({ car }) => {
   return (
     <div className={s.carInfoWrap}>
       <div className={s.mainInfoWrap}>
-        <h2>
-          {car.brand}&nbsp;{car.model},&nbsp;{car.year}
-        </h2>
-        <span style={{ color: "var(--color-grey)" }}>Id:&nbsp;{car.id}</span>
+        <div className={s.titleInfoWrap}>
+          <h2>
+            {car.brand}&nbsp;{car.model},&nbsp;{car.year}
+          </h2>
+          <span style={{ color: "var(--color-grey)" }}>Id:&nbsp;{car.id}</span>
+        </div>
         <div className={s.wrapInfo}>
           <div className={s.wrapLocation}>
             <svg width="16" height="16">
@@ -29,7 +31,7 @@ const CarInfo = ({ car }) => {
         <p className={s.description}>{car.description}</p>
       </div>
 
-      <div>
+      <div className={s.wrapForLists}>
         <ul className={s.listInfo}>
           <h3>Rental Conditions:</h3>
           {car.rentalConditions.map((item) => (

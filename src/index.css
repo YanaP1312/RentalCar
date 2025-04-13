@@ -14,7 +14,7 @@
   --font-alt: "Inter", sans-serif;
 
   /* dt container */
-  --container-width: 1260px;
+  --container-width: 360px;
 
   --transition-default: 0.3s ease-in-out;
 }
@@ -82,7 +82,7 @@ h6 {
 
 h1 {
   font-weight: 700;
-  font-size: 60px;
+  font-size: 50px;
   line-height: 1.2;
   text-align: center;
   color: var(--color-white);
@@ -90,13 +90,13 @@ h1 {
 
 h2 {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.33;
 }
 
 h3 {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.2;
 }
 
@@ -137,8 +137,8 @@ select:-webkit-autofill {
 
 .container {
   max-width: var(--container-width);
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
 }
 
@@ -219,4 +219,39 @@ div.custom-select__indicator {
   padding: 0;
   display: flex;
   align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-weight: 700;
+    font-size: 60px;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 768px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .container {
+    max-width: 1260px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }

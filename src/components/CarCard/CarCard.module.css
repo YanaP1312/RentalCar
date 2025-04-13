@@ -1,5 +1,5 @@
 .carItem {
-  width: calc((100% - 96px) / 4);
+  width: 330px;
 }
 
 .imgWrap {
@@ -7,11 +7,20 @@
   margin-bottom: 16px;
 }
 
+.carItem img {
+  width: 100%;
+}
+
+.carItem:hover img {
+  animation: pulse 1.5s infinite;
+}
+
 .svgHeart {
   fill: var(--color-blue);
   position: absolute;
-  right: 16px;
-  top: 16px;
+  right: 20px;
+  top: 20px;
+  z-index: 99;
 }
 
 .titleWrap {
@@ -39,4 +48,116 @@
   width: 100%;
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .carItem {
+    width: calc((100% - 32px) / 2);
+  }
+
+  .imgWrap {
+    position: relative;
+    margin-bottom: 16px;
+  }
+
+  .carItem:hover img {
+    animation: pulse 1.5s infinite;
+  }
+
+  .svgHeart {
+    fill: var(--color-blue);
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: 99;
+  }
+
+  .titleWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 85%;
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    color: var(--color-grey);
+  }
+
+  .readMoreBtn {
+    margin-top: 28px;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .carItem {
+    width: calc((100% - 96px) / 4);
+  }
+
+  .imgWrap {
+    position: relative;
+    margin-bottom: 16px;
+  }
+
+  .carItem:hover img {
+    animation: pulse 1.5s infinite;
+  }
+
+  .svgHeart {
+    fill: var(--color-blue);
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: 99;
+  }
+
+  .titleWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 85%;
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    color: var(--color-grey);
+  }
+
+  .readMoreBtn {
+    margin-top: 28px;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 }

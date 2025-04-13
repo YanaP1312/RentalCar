@@ -31,14 +31,40 @@
 .heroInfo {
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 .heroInfo h2 {
-  margin-top: 16px;
-  margin-bottom: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .heroInfo button {
   padding: 12px 88px;
+}
+
+@media screen and (min-width: 768px) {
+  .heroInfo {
+    margin-bottom: 60px;
+  }
+
+  .heroInfo h1 {
+    width: 600px;
+  }
+
+  .heroInfo h2 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .heroInfo h1 {
+    width: auto;
+  }
+
+  .heroInfo h2 {
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
 }

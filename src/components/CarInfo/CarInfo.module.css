@@ -3,11 +3,15 @@
   align-items: center;
   gap: 16px;
   margin-top: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .mainInfoWrap {
-  margin-bottom: 68px;
+  margin-bottom: 18px;
+}
+
+.titleInfoWrap span {
+  font-size: 12px;
 }
 
 .wrapLocation {
@@ -17,23 +21,69 @@
 }
 
 .description {
-  margin-top: 32px;
+  margin-top: 18px;
 }
 
 .listInfo:not(:last-child) {
-  margin-bottom: 110px;
+  margin-bottom: 50px;
 }
 
 .listInfo h3 {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .listInfo li:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .listInfo li {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+}
+
+@media screen and (min-width: 768px) {
+  .titleInfoWrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .wrapForLists {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .listInfo {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .wrapInfo {
+    margin-bottom: 16px;
+  }
+
+  .mainInfoWrap {
+    margin-bottom: 68px;
+  }
+
+  .description {
+    margin-top: 32px;
+  }
+
+  .listInfo:not(:last-child) {
+    margin-bottom: 110px;
+  }
+
+  .listInfo h3 {
+    margin-bottom: 20px;
+  }
+
+  .listInfo li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .listInfo li {
+    gap: 8px;
+  }
 }

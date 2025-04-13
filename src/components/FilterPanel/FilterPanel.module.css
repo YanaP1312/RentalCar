@@ -1,8 +1,27 @@
 .searchForm {
-  margin-top: 152px;
+  margin-top: 72px;
   margin-bottom: 28px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: end;
+  align-items: center;
   gap: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .searchForm {
+    margin-top: 100px;
+    margin-bottom: 32px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: end;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .searchForm {
+    margin-top: 152px;
+    margin-bottom: 28px;
+    flex-wrap: nowrap;
+  }
 }

@@ -2,15 +2,41 @@
   display: flex;
   flex-wrap: wrap;
   gap: 48px 32px;
-  margin-bottom: 71px;
+  margin-bottom: 36px;
 }
 
 .emptyWrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vh;
+  height: 20vh;
   width: 100vw;
-  font-size: 40px;
+  font-size: 20px;
   font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .carList {
+    margin-bottom: 50px;
+  }
+
+  .emptyWrap {
+    height: 30vh;
+    font-size: 30px;
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .carList {
+    margin-bottom: 60px;
+  }
+
+  .emptyWrap {
+    height: 40vh;
+    font-size: 40px;
+    width: 100vw;
+  }
 }

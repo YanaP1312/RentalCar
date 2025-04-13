@@ -12,6 +12,7 @@
 .wrapFromMil,
 .wrapToMil {
   position: relative;
+  margin-bottom: 15px;
 }
 
 .wrapFromMil span,
@@ -48,4 +49,11 @@
 
 .iconCross:hover {
   color: var(--color-grey);
+}
+
+@media screen and (min-width: 768px) {
+  .wrapFromMil,
+  .wrapToMil {
+    margin-bottom: 0;
+  }
 }
