@@ -56,11 +56,11 @@ const FilterPanel = ({ setShowFavorites }) => {
     if (mileageToParam) dispatch(setMileageTo(Number(mileageToParam)));
   }, [searchParams, dispatch]);
 
-  useEffect(() => {
-    if (brand || price || mileageFrom || mileageTo) {
-      dispatch(fetchCars());
-    }
-  }, [brand, price, mileageFrom, mileageTo, dispatch]);
+  // useEffect(() => {
+  //   if (brand || price || mileageFrom || mileageTo) {
+  //     dispatch(fetchCars());
+  //   }
+  // }, [brand, price, mileageFrom, mileageTo, dispatch]);
 
   return (
     <form onSubmit={handleSubmit} className={s.searchForm}>

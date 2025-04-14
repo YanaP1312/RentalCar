@@ -15,6 +15,10 @@ const PriceSelect = () => {
     label: price,
   }));
 
+  const handlePriceChange = (selected) => {
+    dispatch(setPrice(selected?.value || ""));
+  };
+
   return (
     <div>
       <label className="select-label">Price/ 1 hour</label>
@@ -25,7 +29,7 @@ const PriceSelect = () => {
         isClearable
         classNamePrefix="custom-select"
         components={{ DropdownIndicator, IndicatorSeparator: () => null }}
-        onChange={(selected) => dispatch(setPrice(selected?.value || ""))}
+        onChange={handlePriceChange}
       />
     </div>
   );

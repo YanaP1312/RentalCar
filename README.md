@@ -90,3 +90,32 @@ On the car detail page:
 
 - A form allows users to fill out their rental info
 - On successful submission, a notification appears
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/rental-car-app.git
+cd rental-car-app
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the dev server
+
+```bash
+npm run dev
+```
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```

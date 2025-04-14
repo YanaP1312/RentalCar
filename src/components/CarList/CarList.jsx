@@ -6,7 +6,6 @@ import {
 } from "../../redux/cars/selectors.js";
 import CarCard from "../CarCard/CarCard.jsx";
 import s from "./CarList.module.css";
-import Loader from "../Loader/Loader.jsx";
 import Error from "../Error/Error.jsx";
 import { selectFavorites } from "../../redux/favorites/selectors.js";
 import { RiseLoader } from "react-spinners";
