@@ -2,7 +2,7 @@
 
 A web application for the **RentalCar** company, designed to provide users with an intuitive interface to browse, filter, and rent cars online. Built using **React + Redux**, this app interacts with a ready-to-use API backend.
 
-> 💡 Try the app live: [rental-car-red-nu.vercel.app]
+> 💡 Try the app live: [https://rental-car-red-nu.vercel.app]
 
 ---
 
