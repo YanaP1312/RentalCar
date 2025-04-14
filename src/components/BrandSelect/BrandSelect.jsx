@@ -2,13 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectBrand, selectBrandList } from "../../redux/filters/selectors.js";
 import Select from "react-select";
 import DropdownIndicator from "../DropdownIndicator/Dropdownindicator.jsx";
-import {
-  setBrand,
-  setMileageFrom,
-  setMileageTo,
-  setPrice,
-} from "../../redux/filters/slice.js";
-import { fetchCars } from "../../redux/cars/operations.js";
+import { setBrand } from "../../redux/filters/slice.js";
 
 const BrandSelect = () => {
   const dispatch = useDispatch();
@@ -18,10 +12,6 @@ const BrandSelect = () => {
 
   const handleBrandChange = (selected) => {
     dispatch(setBrand(selected?.value || ""));
-    // dispatch(setPrice(""));
-    // dispatch(setMileageFrom(""));
-    // dispatch(setMileageTo(""));
-    // dispatch(fetchCars());
   };
 
   return (
