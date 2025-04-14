@@ -18,10 +18,10 @@ const BrandSelect = () => {
 
   const handleBrandChange = (selected) => {
     dispatch(setBrand(selected?.value || ""));
-    dispatch(setPrice(""));
-    dispatch(setMileageFrom(""));
-    dispatch(setMileageTo(""));
-    dispatch(fetchCars());
+    // dispatch(setPrice(""));
+    // dispatch(setMileageFrom(""));
+    // dispatch(setMileageTo(""));
+    // dispatch(fetchCars());
   };
 
   return (

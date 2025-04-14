@@ -17,6 +17,11 @@
   text-align: center;
 }
 
+.wrapLoader {
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (min-width: 768px) {
   .carList {
     margin-bottom: 50px;

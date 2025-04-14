@@ -9,6 +9,7 @@ import s from "./CarList.module.css";
 import Loader from "../Loader/Loader.jsx";
 import Error from "../Error/Error.jsx";
 import { selectFavorites } from "../../redux/favorites/selectors.js";
+import { RiseLoader } from "react-spinners";
 
 const CarList = ({ showFavorites }) => {
   const items = useSelector(selectItems);
@@ -23,7 +24,9 @@ const CarList = ({ showFavorites }) => {
       {error ? (
         <Error />
       ) : loading ? (
-        <Loader />
+        <div className={s.wrapLoader}>
+          <RiseLoader color="var(--color-blue)" />
+        </div>
       ) : (
         <ul className={s.carList}>
           {listToRender.length === 0 ? (

@@ -184,7 +184,7 @@ div.custom-select__menu {
   height: 286px;
   background: var(--color-white);
   box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.02);
-  z-index: 99;
+  z-index: 9999999;
   overflow: hidden;
 }
 

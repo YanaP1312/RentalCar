@@ -20,7 +20,7 @@
   position: absolute;
   right: 20px;
   top: 20px;
-  z-index: 99;
+  z-index: 1;
 }
 
 .titleWrap {
