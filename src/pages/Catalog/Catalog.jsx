@@ -33,7 +33,7 @@ const Catalog = () => {
             "Show all"
           ) : (
             <>
-              Show&nbsp;
+              Favorites&nbsp;
               <svg width="16" height="16">
                 <use href="/sprite.svg#icon-heart-fill" />
               </svg>
