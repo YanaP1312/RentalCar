@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import Select from "react-select";
-import DropdownIndicator from "../DropdownIndicator/DropdownIndicator.jsx";
+import DropdownIndicator from "../DropdownIndicator/Dropdownindicator.jsx";
 import SingleValue from "../SingleValue/SingleValue.jsx";
 import { setPrice } from "../../redux/filters/slice.js";
 import { selectPrice } from "../../redux/filters/selectors.js";

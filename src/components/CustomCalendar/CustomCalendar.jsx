@@ -3,7 +3,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./CustomCalendar.css";
 import { registerLocale } from "react-datepicker";
 import enUS from "date-fns/locale/en-US";
-import { useState } from "react";
 
 registerLocale("en", {
   ...enUS,
