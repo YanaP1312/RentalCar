@@ -49,7 +49,10 @@
 }
 
 .react-datepicker__day--selected,
-.react-datepicker__day--keyboard-selected {
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__day--range-start,
+.react-datepicker__day--range-end,
+.react-datepicker__day--in-range {
   background-color: var(--color-blue) !important;
   color: var(--color-white) !important;
 }

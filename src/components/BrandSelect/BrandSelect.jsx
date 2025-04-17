@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { selectBrand, selectBrandList } from "../../redux/filters/selectors.js";
 import Select from "react-select";
-import DropdownIndicator from "../DropdownIndicator/Dropdownindicator.jsx";
+import DropdownIndicator from "../DropdownIndicator/DropdownIndicator.jsx";
 import { setBrand } from "../../redux/filters/slice.js";
 
 const BrandSelect = () => {

@@ -4,7 +4,8 @@ import CustomCalendar from "../CustomCalendar/CustomCalendar.jsx";
 import s from "./BookForm.module.css";
 
 const BookForm = () => {
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [dateRange, setDateRange] = useState([null, null]);
+
   const handleSubmit = (evt) => {
     evt.preventDefault();
     const form = evt.target;
@@ -33,7 +34,7 @@ const BookForm = () => {
       "🚘 Thanks for your reservation! Our manager will contact you shortly."
     );
     form.reset();
-    setSelectedDate(null);
+    setDateRange([null, null]);
   };
 
   return (
@@ -68,8 +69,8 @@ const BookForm = () => {
           }}
         />
         <CustomCalendar
-          selected={selectedDate}
-          onChange={(date) => setSelectedDate(date)}
+          value={dateRange}
+          onChange={(update) => setDateRange(update)}
         />
         <textarea type="text" placeholder="Comment" name="comment" />
       </div>
